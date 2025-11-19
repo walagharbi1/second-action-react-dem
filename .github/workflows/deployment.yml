@@ -37,3 +37,9 @@ jobs:
         run: npm run build
       - name: Déploiement
         run: echo "Déploiement simulé terminé !"
+  notify:
+  needs: [test, deploy]
+  runs-on: ubuntu-latest
+  steps:
+    - name: Notification équipe
+      run: echo "Déploiement terminé — notification envoyée à l’équipe !"      
