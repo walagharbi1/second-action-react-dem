@@ -36,5 +36,3 @@ jobs:
         run: npm run build
       - name: Déploiement
         run: echo "Déploiement simulé terminé ..."
-  deploy:
-    needs: test
