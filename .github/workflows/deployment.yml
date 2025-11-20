@@ -4,14 +4,18 @@ on:
   push:
     branches:
       - main
+      - dev-*      # branches commençant par “dev-”
+      - feat/**    # branches commençant par “feat/” (sous-dossiers inclus)
+
   pull_request:
     types: [opened, reopened, edited]
     branches:
       - main
+
   issues:
     types: [opened, closed]
-  workflow_dispatch:
 
+  workflow_dispatch:
 jobs:
   test:
     runs-on: ubuntu-latest
