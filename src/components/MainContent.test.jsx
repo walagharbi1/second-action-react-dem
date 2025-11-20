@@ -20,3 +20,4 @@ describe('MainContent', () => {
   });
 });
 // Commentaire temporaire pour tester le comportement du workflow
+// Ajout d’une simple note — sans modification du code
