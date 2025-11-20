@@ -1,0 +1,14 @@
+name: branch-filter-demo
+
+on:
+  push:
+    branches:
+      - release-*
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Annonce
+        run: echo "Nouvelle branche de release détectée — lancement du build !"
