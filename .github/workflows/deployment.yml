@@ -4,12 +4,10 @@ on:
   push:
     branches:
       - main
-
-  pull_request:
-    types: [opened]
-    branches: [main]
-
-  workflow_dispatch:
+      - dev-*      # branches commençant par “dev-”
+      - feat/**    # branches commençant par “feat/” (sous-dossiers inclus)
+    paths-ignore:
+      - .github/workflows/**
 
 jobs:
   test:
