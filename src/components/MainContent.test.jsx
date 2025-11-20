@@ -19,3 +19,4 @@ describe('MainContent', () => {
     expect(screen.getByTestId('help-area')).toBeInTheDocument();
   });
 });
+// Commentaire temporaire pour tester le comportement du workflow
